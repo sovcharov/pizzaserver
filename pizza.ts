@@ -54,9 +54,16 @@ app.post('/api/saveorder', function(req, res) {
     order.cart[i].price = (order.cart[i].price/order.usdPerCurrency).toFixed(2);
     order.cart[i].price = parseFloat(order.cart[i].price);
   }
-  // mySqlService.saveOrder(req.body.order, (items) => {
-  //
-  // });
+  mySqlService.saveOrder(req.body.order, (items) => {
+    let qtyRowsSent = 0;
+    for (let i = 0; i < order.cart.length; i += 1) {
+      mySqlService.saveOrder(req.body.order, items.data.id, (items) => {
+        let qtyRowsSent = 0;
+        console.log(items);
+      });
+    }
+    console.log(items);
+  });
 });
 
 app.use('/:path', express.static(__dirname + '/static'));
