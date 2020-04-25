@@ -32,4 +32,22 @@ app.get('/api/getmenu', function(req, res) {
   });
 });
 
+app.get('/api/getorders/:user', function(req, res) {
+  mySqlService.getOrders(req.params.user, (items) => {
+    res.send(items);
+  });
+});
+
+app.get('/api/getorder/:order', function(req, res) {
+  mySqlService.getOrder(req.params.order, (items) => {
+    res.send(items);
+  });
+});
+
+app.put('/api/saveorder', function(req, res) {
+  mySqlService.saveOrder(req.body.order, (items) => {
+    res.send(items);
+  });
+});
+
 app.use('/:path', express.static(__dirname + '/static'));
