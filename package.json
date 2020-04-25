@@ -1,0 +1,11 @@
+{
+  "name": "pizzaserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pizza.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergei Ovcharov",
+  "license": "ISC"
+}
