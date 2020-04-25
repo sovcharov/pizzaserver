@@ -21,6 +21,8 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use('/', express.static(__dirname + '/static'));
+
 app.get('/api/getmenu', function(req, res) {
   console.log("api works");
 });
