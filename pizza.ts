@@ -25,8 +25,11 @@ app.use(function(req, res, next) {
 
 app.use('/', express.static(__dirname + '/static'));
 
+
 app.get('/api/getmenu', function(req, res) {
   mySqlService.getMenu((items) => {
     res.send(items);
   });
 });
+
+app.use('/:path', express.static(__dirname + '/static'));
