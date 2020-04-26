@@ -1,5 +1,7 @@
 # pizzaserver
 
+To try app go to http://52.23.88.1:3339
+
 To install on your machine do following steps:
 
 Assuming you have following installed ob your machine:
