@@ -37,9 +37,11 @@ export class MySqlConnection {
 ###To install app:
 
 git clone 'https://github.com/yahooserg/pizzaserver.git'
+
 npm install
 
 To start:
+
 ts-node pizza.ts
 
 Now you should be able to run you browser and go to: http://yourhost.com:3339
