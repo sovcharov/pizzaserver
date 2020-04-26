@@ -7,7 +7,7 @@ To install on your machine do following steps:
 Assuming you have following installed ob your machine:
 ts-node, npm, mysql server.
 
-### Config files folder placed in the same folder where folder with cloned project will be placed.
+##### Config files folder placed in the same folder where folder with cloned project will be placed.
 Name of config files folder: serverconfig
 
 Name of node config file: mynodeconfig.ts
@@ -32,7 +32,7 @@ export class MySqlConnection {
   database = 'pizza';//db
 }
 
-### Import db to you MySQL server from file in this repository: db/pizza.sql
+###### Import db to you MySQL server from file in this folder: db/pizza.sql
 
 ##### To install app:
 
