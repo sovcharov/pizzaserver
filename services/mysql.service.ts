@@ -115,7 +115,7 @@ export class MySqlService {
   saveOrderItem(item, orderid, callback) {
     let items = [];
     let error: any = false;
-    let query = `call saveOrderItem('${item}');`;
+    let query = `call saveOrderItem('${item.itemId}', '${item.qty}', '${item.price}', '${orderid}');`;
 
     let connection = mysql.createConnection(mySqlConnection);
     let request = connection.query(query);

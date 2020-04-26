@@ -57,12 +57,13 @@ app.post('/api/saveorder', function(req, res) {
   mySqlService.saveOrder(req.body.order, (items) => {
     let qtyRowsSent = 0;
     for (let i = 0; i < order.cart.length; i += 1) {
-      mySqlService.saveOrder(req.body.order, items.data.id, (items) => {
-        let qtyRowsSent = 0;
-        console.log(items);
+      mySqlService.saveOrderItem(order.cart[i], items.data[0].id, (data) => {
+        qtyRowsSent += 1;
+        if (qtyRowsSent === order.cart.length) {
+          res.send({result: true})
+        }
       });
     }
-    console.log(items);
   });
 });
 
