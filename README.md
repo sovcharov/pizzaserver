@@ -34,13 +34,13 @@ export class MySqlConnection {
 
 ### Import db to you MySQL server from file in this repository: db/pizza.sql
 
-###To install app:
+##### To install app:
 
 git clone 'https://github.com/yahooserg/pizzaserver.git'
 
 npm install
 
-To start:
+##### To start:
 
 ts-node pizza.ts
 
