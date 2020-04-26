@@ -7,7 +7,7 @@ To install on your machine do following steps:
 Assuming you have following installed ob your machine:
 ts-node, npm, mysql server.
 
-Config files folder placed in the same folder where folder with cloned project will be placed.
+### Config files folder placed in the same folder where folder with cloned project will be placed.
 Name of config files folder: serverconfig
 
 Name of node config file: mynodeconfig.ts
@@ -32,16 +32,17 @@ export class MySqlConnection {
   database = 'pizza';//db
 }
 
-Import db to you MySQL server from file in this repository: db/pizza.sql
+### Import db to you MySQL server from file in this repository: db/pizza.sql
 
-To install app:
+###To install app:
+
 git clone 'https://github.com/yahooserg/pizzaserver.git'
 npm install
 
 To start:
 ts-node pizza.ts
 
-Now you should able to run you browser and go to: http://yourhost.com:3339
+Now you should be able to run you browser and go to: http://yourhost.com:3339
 
 Remember: you server will run on port 3339, you can not change port otherwise your static Angular app won't work.
 If you wish to change the port number, you'll have to build angular app with different config, place built into static folder, then change port of this node app in config.
